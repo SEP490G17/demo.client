@@ -19,8 +19,8 @@ async function post(url: string, body: {}) {
     body: JSON.stringify(body),
   };
 
+  console.log('payload data', body);
   const response = await fetch(baseUrl + url, requestOptions);
-
   return handleResponse(response);
 }
 
@@ -50,7 +50,7 @@ async function del(url: string) {
 async function getHeaders() {
 //   const session = await auth();
   const headers = {
-    "Content-type": "application/json",
+    'Content-Type': 'application/json',
   } as any;
 //   if (session?.accessToken) {
 //     headers.Authorization = "Bearer " + session.accessToken;
