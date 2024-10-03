@@ -28,13 +28,26 @@
   }
   .details-service {
     .details-service-body {
-      font-size: 1.1em ;
-      svg{
-        font-size:1.4em !important;
+      font-size: 1.1em;
+      svg {
+        font-size: 1.4em !important;
       }
     }
     .ant-card-body {
       padding: 8px !important;
+    }
+  }
+}
+.schedule-details {
+  .e-schedule {
+    .e-table-container {
+      .e-table-wrap {
+        .e-schedule-table {
+          col{
+            width: 80px !important;
+          }
+        }
+      }
     }
   }
 }

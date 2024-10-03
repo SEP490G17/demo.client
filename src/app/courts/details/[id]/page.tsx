@@ -13,6 +13,8 @@ import { FaLocationDot, FaStar } from "react-icons/fa6";
 import ListCourtImage from "../../components/ListCourtImage";
 import DetailsCourtCard from "../../components/DetailsCourtCard";
 import ProductList from "@/app/components/MainContent/ProductList";
+import BookWithRequirement from "../../components/BookWithRequirement";
+import ScheduleModel from "../../components/ScheduleModel";
 export default function page() {
   const images = [
     { src: san1.src },
@@ -55,6 +57,16 @@ export default function page() {
           </Col>
           <Col span={8}>
             <DetailsCourtCard court={court!} />
+          </Col>
+        </Row>
+      </div>
+      <div className="w-full mt-2 mb-6">
+        <Row gutter={[24, 1]}>
+          <Col span={6}>
+            <BookWithRequirement />
+          </Col>
+          <Col span={18}>
+            <ScheduleModel />
           </Col>
         </Row>
       </div>
