@@ -16,7 +16,7 @@ export default function DetailsCourtCard({ court }: IProps) {
         <Divider type="vertical" className="divider" />
         <Typography.Title level={4}>Thông tin sân</Typography.Title>
       </Flex>
-      <table className="w-full details-table">
+      <table className="w-full details-table mb-8">
         <tbody>
           <tr>
             <td>Giờ mở cửa:</td>
