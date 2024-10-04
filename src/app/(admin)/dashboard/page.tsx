@@ -1,5 +1,4 @@
 import AdminCard from "@/app/components/admin/admin.card";
-import AdminLayout from "./layout";
 
 const DashboardPage = () => {
 

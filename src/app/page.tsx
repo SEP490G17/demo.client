@@ -6,7 +6,7 @@ import SideContent from "./components/SideContent/SideContent";
 export default function Home() {
   return (
     <>
-      <Flex gap="large">
+      <Flex>
         <MainContent />
         <SideContent />
       </Flex>
