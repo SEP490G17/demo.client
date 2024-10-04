@@ -56,9 +56,18 @@ export default function ScheduleCustomComponent({ bookingsData }: Props) {
   const scheduleRef = useRef(null);
   const group = { byGroupID: false, resources: [] };
   const onPopupOpen = (args: PopupOpenEventArgs) => {
-    console.log(args);
+    console.log(args.type);
+    if (args.type == 'QuickInfo') {
+      const titleInput = args.element.querySelector('input[name="subject"]');
+      console.log('input',titleInput);
+      if (titleInput) {
+        console.log('tim thay')
+        titleInput.style.display = 'none !important'; // Ẩn ô input đi
+        // Hoặc titleInput.remove(); // Xóa ô input khỏi DOM
+      }
+    }
+
     if (args.type === "Editor") {
-      
       const descriptionField = args?.element.querySelector(
         ".e-description-container"
       );
@@ -72,11 +81,11 @@ export default function ScheduleCustomComponent({ bookingsData }: Props) {
       if (args.data) {
         // Nếu có dữ liệu sự kiện, tức là đây là một sự kiện đã tồn tại
         // Ẩn nút "Save"
-        const saveButton = args.element.querySelector('.e-event-save');
+        const saveButton = args.element.querySelector(".e-event-save");
         if (saveButton) {
-            saveButton.style.display = 'none'; // Ẩn nút "Save"
+          saveButton.style.display = "none"; // Ẩn nút "Save"
         }
-    }
+      }
       if (descriptionField) {
         descriptionField.style.display = "none"; // Ẩn trường
       }
